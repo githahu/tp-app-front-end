@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 import Students from './Students'
 import { Route, Routes } from 'react-router-dom'
@@ -11,15 +11,22 @@ import Teachers from './Teachers'
 
 function App() {
 
-  // const [students, setStudents] = useState([]);
+  const [students, setStudents] = useState([]);
+  const [teachers, setTeachers] = useState([]);
      
-  // useEffect(() => {
-  //   fetch("http://localhost:9292/students")
-  //   .then((r) => r.json)
-  //   .then((data) => {
-  //     setStudents(data);
-  //   });
-  // }, []);
+  useEffect(() => {
+    fetch("http://localhost:9292/students")
+    .then((r) => r.json())
+    .then((data) => {
+      setStudents(data);
+    });
+
+    fetch("http://localhost:9292/teachers")
+    .then((r) => r.json())
+    .then((data) => {
+      setTeachers(data);
+    });
+  }, []);
 
 
 
@@ -28,9 +35,9 @@ function App() {
      <Navbar  />
      <Routes>
      
-      <Route path="/students" element={<Students />} />
-      <Route path="/teachers" element={<Teachers />} />
-      <Route path="/results" element={<Results/>} /> 
+      <Route path="/students" element={<Students students={students} />} />
+      <Route path="/teachers" element={<Teachers teachers={teachers}/>} />
+      <Route path="/results" element={<Results students={students} teachers={teachers}/>} /> 
       <Route path="/" element={<Home />} />
 
       
@@ -39,4 +46,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
