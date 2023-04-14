@@ -7,7 +7,12 @@ function Home() {
     <div className='home-container'>
         <div className="home-text">
             <h2>Transparent Results</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eos autem a mollitia. Veritatis rem, aspernatur voluptas optio vero iusto dolore. Eaque quaerat adipisci laudantium minima, nobis omnis architecto veniam.</p>
+            <p>This simple app is designed to communicate clear timely and transparent results to different users: parents, students as well as teachers. 
+                Feel free to interact with its easy and appealing interface for better and satisfying results.
+It has 3 extra links that you can access easily through the above links.            </p>
+            <li>Students</li>
+            <li>Teachers</li>
+            <li>results</li>
             <Link to="/results">
             <button>View Results</button>
             </Link>       
