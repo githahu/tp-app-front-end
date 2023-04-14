@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+ }
+ .navbar-container {
+
+  margin: auto;
+  padding: 2rem 7.5%;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 4px 3px #ccc;
+
+ }
+ .logo {
+  text-transform: uppercase;
+
+ }
+a {
+  text-decoration: none;
+  color: orangered;
+
+}
+ .navbar-menu a {
+  font-size: 1.2rem;
+  margin-left: 2rem;
+ }
+
+ .home-container {
+  /* margin: 4rem 0; */
+  padding: 0 7.5%;
+  display: flex;
+  height: calc(100vh - 10rem);
+  align-items: center;
+  /* border: 1px solid; */
+ }
+ .home-text {
+  width: 40%;
+
+ }
+ .home-image {
+  width: 60%;
+ }
+ .home-image img {
+  width: 100%;
+ }
+
+ .home-text h2 {
+  font-size: 1.8rem;
+  color: orangered;
+  margin-bottom: 1rem;
+ }
+
+ .home-text button {
+  background-color: orangered;
+  border: 1px solid orangered;
+  padding: 4px 1rem;
+  border-radius: 50px;
+  margin-top: 1.5rem;
+  color: white;
+  font-size: 1.2rem;
+  
+ }
+
+ .students-main-container {
+  margin: 2rem 0;
+  padding: 1rem 7.5%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid;
+ }
